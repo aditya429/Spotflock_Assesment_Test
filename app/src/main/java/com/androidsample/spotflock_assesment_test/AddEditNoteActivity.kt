@@ -45,6 +45,7 @@ class AddEditNoteActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
+       selectedRadio = "Personal"
         binding.ccp.registerPhoneNumberTextView(binding.edtPhone)
 
 
@@ -78,8 +79,11 @@ class AddEditNoteActivity : AppCompatActivity() {
             binding.idEdtNoteEmail.setText(noteEmail)
             if (noteContactType.equals("Personal")) {
                 binding.radioPersonal.isChecked = true
+                selectedRadio = "Personal"
             } else {
                 binding.radioBusiness.isChecked = true
+                selectedRadio = "Business"
+
             }
 
             // noteEdt.setText(noteDescription)
