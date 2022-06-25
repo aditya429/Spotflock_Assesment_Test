@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_margin="2dp">
+
+
+        <!--text view for displaying course name-->
+        <TextView
+            android:id="@+id/alldata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="All"
+            android:gravity="center"
+            android:padding="8dp"
+
+            android:textColor="@color/black"
+            android:textSize="18sp"
+           />
+
+        <!--text view for displaying course tracks-->
+        <TextView
+            android:id="@+id/personaldata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alldata"
+            android:layout_marginTop="10dp"
+            android:text="Personal"
+            android:gravity="center"
+android:padding="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!--text view for displaying course duration-->
+        <TextView
+            android:id="@+id/businessdata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personaldata"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Business"
+            android:padding="8dp"
+
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!--button for dismissing our dialog-->
+        <Button
+            android:id="@+id/idBtnDismiss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/businessdata"
+            android:layout_margin="10dp"
+            android:text="Close"
+            android:background="@color/purple_700"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

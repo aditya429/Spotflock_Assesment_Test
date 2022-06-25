@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddEditNoteActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:title="Add/Edit Contact"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+
+        app:titleTextColor="@color/purple_700">
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <!--edit text for note title-->
+    <EditText
+        android:id="@+id/idEdtNoteName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/toolbar"
+        android:hint="Enter Contact Name"
+        android:background="@drawable/edittext_bg"
+        android:textColor="@color/contact_name"
+        android:textColorHint="@color/contact_number" />
+
+    <LinearLayout
+        android:id="@+id/llPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+
+        android:layout_below="@+id/idEdtNoteName"
+       >
+
+        <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccp_defaultNameCode="IN"
+            app:ccp_defaultCode="91"
+            app:ccp_textColor="#1C2020"
+            android:padding="16dp"
+            app:ccp_countryPreference="IN,US,NZ"/>
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:padding="15dp"
+            android:hint="Enter Phone Number"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="12"
+            android:background="@drawable/edittext_bg"
+
+            android:textColor="@color/contact_name"
+            android:textColorHint="@color/contact_number" />
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/idEdtNoteEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Email"
+        android:background="@drawable/edittext_bg"
+
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/llPhone"
+        android:textColor="@color/contact_name"
+        android:textColorHint="@color/contact_number" />
+
+    <RadioGroup android:id="@+id/radiogrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:theme="@style/MyRadioButton"
+        android:layout_below="@+id/idEdtNoteEmail"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/radio_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal"
+            android:checked="true"
+            android:textColor="@color/purple_500"
+            android:textSize="14sp"
+            android:padding="4dp"
+            android:onClick="onRadioButtonClicked"
+           />
+        <RadioButton android:id="@+id/radio_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business"
+            android:textSize="14sp"
+            android:padding="4dp"
+            android:textColor="@color/purple_500"
+            android:onClick="onRadioButtonClicked"
+           />
+    </RadioGroup>
+
+    <!--button for saving and updating a note-->
+    <Button
+        android:id="@+id/idBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:text="Button"
+        android:background="@color/purple_700"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
